@@ -74,7 +74,7 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 550px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
@@ -102,4 +102,9 @@ $navbar-inverse-border: #e7e7e7;
 .navbar-inverse {
   background-color: $navbar-inverse-bg;
   border-color: $navbar-inverse-border;
+}
+
+.navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #e7e7e7;
+    color: #555;
 }
