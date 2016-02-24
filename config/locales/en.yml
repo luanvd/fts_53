@@ -37,10 +37,18 @@ en:
     email: "User Email"
     created_at: "Created at"
     updated_at: "Updated at"
+    show: "Showing user"
+    create_success: "Created success an User"
+    create_failed: "Failed to create an User!"
+    update_success: "Updated an user"
+    update_failed: "Failed to update an User!"
+    delete_success: "Deleted an User"
+    delete_failed: "Failed to delete an User"
   button:
     edit: "Edit"
     delete: "Delete"
     action: "Action"
+    submit: "Submit"
   access_denied: "Access Denied!"
   admin:
     users: "Listing Users"
