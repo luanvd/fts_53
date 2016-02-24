@@ -1,0 +1,29 @@
+<h1><%= link_to t "subject.list" %></h1>
+<%= link_to t("subject.create"), "#", class: "btn btn-primary" %>
+<table id="subjects" class="table table-striped">
+  <thead>
+    <th>#</th>
+    <th><%= t "subject.name" %></th>
+    <th><%= t "subject.created_at" %></th>
+    <th><%= t "subject.updated_at" %></th>
+    <th><%= t "button.action" %></th>
+  </thead>
+  <tbody>
+    <% @subjects.each_with_index do |subject, index| %>
+      <tr>
+        <td><%= index + 1 %></td>
+        <td><%= link_to subject.name, [:admin, subject] %></td>
+        <td>
+          <%= t "ago", time: time_ago_in_words(subject.created_at) %>
+        </td>
+        <td><%= t "ago", time: time_ago_in_words(subject.updated_at) %></td>
+        <td>
+          <%= link_to t("button.edit"), "#", class: "btn btn-primary" %>
+          <%= link_to t("button.delete"), "#",
+            method: :delete, data: {confirm: t("confirm")},
+            class: "btn btn-default btn-primary" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
