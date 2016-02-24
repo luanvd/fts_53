@@ -28,3 +28,5 @@ en:
   sign_in: "Sign in"
   reset_password: "Forgot your password"
   sign_up: "Sign up"
+  user:
+    update: "Update"
