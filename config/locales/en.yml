@@ -50,6 +50,13 @@ en:
     name: "Subject Name"
     created_at: "Created at"
     updated_at: "Updated at"
+    show: "Showing Subject"
+    create_success: "Created success a Subject"
+    create_failed: "Failed to create an Subject!"
+    update_success: "Updated an Subject"
+    update_failed: "Failed to update an Subject!"
+    delete_success: "Deleted an Subject"
+    delete_failed: "Failed to delete an Subject"
   button:
     edit: "Edit"
     delete: "Delete"
