@@ -57,6 +57,15 @@ en:
     update_failed: "Failed to update an Subject!"
     delete_success: "Deleted an Subject"
     delete_failed: "Failed to delete an Subject"
+  question:
+    list: "Listing Question"
+    create: "Create Question"
+    content: "Content"
+    created_at: "Created at"
+    updated_at: "Updated at"
+    status: "Status"
+    waiting: "Waiting"
+    approved: "Approved"
   button:
     edit: "Edit"
     delete: "Delete"
