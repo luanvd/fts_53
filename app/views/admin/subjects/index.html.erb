@@ -1,5 +1,6 @@
 <h1><%= link_to t "subject.list" %></h1>
-<%= link_to t("subject.create"), "#", class: "btn btn-primary" %>
+<%= link_to t("subject.create"), new_admin_subject_path, class:
+  "btn btn-primary" %>
 <table id="subjects" class="table table-striped">
   <thead>
     <th>#</th>
@@ -18,8 +19,9 @@
         </td>
         <td><%= t "ago", time: time_ago_in_words(subject.updated_at) %></td>
         <td>
-          <%= link_to t("button.edit"), "#", class: "btn btn-primary" %>
-          <%= link_to t("button.delete"), "#",
+          <%= link_to t("button.edit"), edit_admin_subject_path(subject),
+            class: "btn btn-primary" %>
+          <%= link_to t("button.delete"), admin_subject_path(subject),
             method: :delete, data: {confirm: t("confirm")},
             class: "btn btn-default btn-primary" %>
         </td>
