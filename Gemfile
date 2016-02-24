@@ -12,6 +12,7 @@ gem "sdoc", "~> 0.4.0", group: :doc
 gem "bootstrap-sass"
 gem "devise"
 gem "table_print"
+gem "cancancan"
 
 group :development, :test do
   gem "byebug"

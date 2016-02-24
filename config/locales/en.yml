@@ -30,3 +30,4 @@ en:
   sign_up: "Sign up"
   user:
     update: "Update"
+  access_denied: "Access Denied!"

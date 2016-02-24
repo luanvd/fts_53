@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223080326) do
+ActiveRecord::Schema.define(version: 20160224033005) do
 
   create_table "lessons", force: :cascade do |t|
     t.integer  "user_id"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20160223080326) do
     t.datetime "updated_at",                          null: false
     t.string   "name"
     t.string   "chatworkid"
+    t.integer  "role"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
