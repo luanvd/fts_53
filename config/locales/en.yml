@@ -44,6 +44,12 @@ en:
     update_failed: "Failed to update an User!"
     delete_success: "Deleted an User"
     delete_failed: "Failed to delete an User"
+  subject:
+    list: "Listing Subject"
+    create: "Create Subject"
+    name: "Subject Name"
+    created_at: "Created at"
+    updated_at: "Updated at"
   button:
     edit: "Edit"
     delete: "Delete"
@@ -52,3 +58,4 @@ en:
   access_denied: "Access Denied!"
   admin:
     users: "Listing Users"
+    subjects: "Listing Subjects"
