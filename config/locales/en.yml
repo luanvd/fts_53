@@ -28,6 +28,19 @@ en:
   sign_in: "Sign in"
   reset_password: "Forgot your password"
   sign_up: "Sign up"
+  confirm: "Are you sure!"
+  ago: "%{time} ago"
   user:
     update: "Update"
+    list: "Listing User"
+    name: "User Name"
+    email: "User Email"
+    created_at: "Created at"
+    updated_at: "Updated at"
+  button:
+    edit: "Edit"
+    delete: "Delete"
+    action: "Action"
   access_denied: "Access Denied!"
+  admin:
+    users: "Listing Users"
