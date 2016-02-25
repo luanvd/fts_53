@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     resources :questions
   end
   resources :users, only: [:index, :update]
-  resources :questions, only:[:index]
+  resources :questions, only:[:index, :show]
   resources :subjects, only: [:index]
 end

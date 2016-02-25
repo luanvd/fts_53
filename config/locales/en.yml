@@ -80,6 +80,14 @@ en:
     select_status: "Select Status"
     suggest: "Suggest Question"
     title: "Question"
+    content: "Content"
+    subject: "Subject"
+    edit: "Edit"
+    delete: "Delete"
+    show: "Question Show"
+  question_answer:
+    correct: "Correct"
+    incorrect: "Incorrect"
   button:
     edit: "Edit"
     delete: "Delete"

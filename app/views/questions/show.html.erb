@@ -1,0 +1,28 @@
+<h1><%= t "question.show" %></h1>
+<table class="table table-striped">
+  <tr>
+    <td><b><%= t "question.content" %></b></td>
+    <td><%= @question.content %></td>
+  </tr>
+  <tr>
+    <td><b><%= t "question.answers" %></b></td>
+    <td>
+      <% @question_answers.each do |question_answer| %>
+        <tr>
+          <td><%= question_answer.content %></td>
+          <td><%= status_of(question_answer).html_safe %></td>
+        </tr>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td><b><%= t "question.subject" %></b></td>
+    <td><%= @question.subject.name %></td>
+  </tr>
+  <tr>
+    <td><b><%= t "question.status" %></b></td>
+    <td><%= status_of(@question).html_safe %></td>
+  </tr>
+</table>
+<%= link_to t("question.edit"), "#", class: "btn btn-primary" %>
+<%= link_to t("question.delete"), "#", class: "btn btn-danger" %>
