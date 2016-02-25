@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     resources :subjects
     resources :questions
   end
-  resources :users
+  resources :users, only: [:index, :update]
+  resources :questions, only:[:index]
+  resources :subjects, only: [:index]
 end

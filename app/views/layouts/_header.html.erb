@@ -5,7 +5,6 @@
       <nav>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to t("home"), root_url %></li>
-          <li><%= link_to t("contribute_question"), "#" %>
           <li><%= link_to t("about"), about_url %></li>
           <% if user_signed_in? %>
             <% if current_user.admin? %>
@@ -14,6 +13,8 @@
               <li>
                 <%= link_to t("admin.questions"), admin_questions_path %>
               </li>
+            <% else %>
+              <li><%= link_to t("contribute_question"), questions_path %>
             <% end %>
             <li class="dropdown" id="dropdownMenuDivider">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">

@@ -78,6 +78,8 @@ en:
     update_status_success: "Change question's status to Approve"
     update_status_failed: "Error when change question's status!"
     select_status: "Select Status"
+    suggest: "Suggest Question"
+    title: "Question"
   button:
     edit: "Edit"
     delete: "Delete"
@@ -88,3 +90,4 @@ en:
   admin:
     users: "Listing Users"
     subjects: "Listing Subjects"
+    questions: "Listing Questions"

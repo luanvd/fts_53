@@ -9,6 +9,7 @@ class Ability
       cannot :read, :all
     else
       can :update, User, id: user.id
+      can :index, Question
     end
   end
 end

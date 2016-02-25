@@ -1,0 +1,28 @@
+<h1><%= t "question.suggest" %></h1>
+<%= link_to t("question.create"), "#", class: "btn btn-primary" %>
+<table id="questions" class="table table-striped">
+  <thead>
+    <th>#</th>
+    <th><%= t "question.title" %></th>
+    <th><%= t "question.subject" %></th>
+    <th><%= t "question.status" %></th>
+    <th><%= t "button.action" %></th>
+  </thead>
+  <tbody>
+    <% @questions.each_with_index do |question, index| %>
+      <tr>
+        <td><%= index + 1 %></td>
+        <td><%= link_to question.content, "#" %></td>
+        <td><%= question.subject.name %></td>
+        <td>
+          <%= status_of(question).html_safe %>
+        </td>
+        <td>
+          <%= link_to t("button.edit"), "#", class: "btn btn-primary" %>
+          <%= link_to t("button.delete"), "#", method: :delete, data:
+            {confirm: t("confirm")}, class: "btn btn-default btn-primary" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
