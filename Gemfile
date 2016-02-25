@@ -13,6 +13,7 @@ gem "bootstrap-sass"
 gem "devise"
 gem "table_print"
 gem "cancancan"
+gem "config"
 
 group :development, :test do
   gem "byebug"

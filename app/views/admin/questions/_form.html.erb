@@ -1,0 +1,14 @@
+<%= form_for [:admin, @question], class: "form-group" do |f| %>
+  <%= f.label :subject_id %>
+  <%= f.collection_select :subject_id, Subject.all, :id, :name,
+    {prompt: t("subject.select")}, {class: "form-control"} %>
+  <%= f.label :content %>
+  <%= f.text_field :content, class: "form-control" %>
+  <h4><%= t "question.answers" %></h4>
+  <%= f.fields_for :question_answers do |builder| %>
+    <%= builder.text_field :content, class: "form-control" %>
+    <%= builder.check_box :correct %>
+  <% end %>
+  <%= f.submit t("button.submit"), class:
+    "btn btn-default btn-large btn-primary" %>
+<% end %>
