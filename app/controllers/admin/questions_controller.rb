@@ -47,7 +47,7 @@ class Admin::QuestionsController < ApplicationController
 
   private
   def question_params
-    params.require(:question).permit :subject_id, :content,
+    params.require(:question).permit :subject_id, :content, :status,
       question_answers_attributes: [:id, :content, :correct, :_destroy]
   end
 end

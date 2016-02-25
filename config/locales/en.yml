@@ -74,11 +74,16 @@ en:
     delete_success: "Deleted a Subject"
     delete_failed: "Failed to delete a Question"
     answers: "Answers"
+    approve: "Approve"
+    update_status_success: "Change question's status to Approve"
+    update_status_failed: "Error when change question's status!"
+    select_status: "Select Status"
   button:
     edit: "Edit"
     delete: "Delete"
     action: "Action"
     submit: "Submit"
+    approve: "Approve"
   access_denied: "Access Denied!"
   admin:
     users: "Listing Users"

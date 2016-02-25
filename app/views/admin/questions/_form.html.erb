@@ -4,6 +4,9 @@
     {prompt: t("subject.select")}, {class: "form-control"} %>
   <%= f.label :content %>
   <%= f.text_field :content, class: "form-control" %>
+  <%= f.label :status %>
+  <%= f.select :status, Question.statuses.keys.to_a, {prompt: t(
+    "question.select_status")}, {class: "form-control"} %>
   <h4><%= t "question.answers" %></h4>
   <%= f.fields_for :question_answers do |builder| %>
     <%= builder.text_field :content, class: "form-control" %>
