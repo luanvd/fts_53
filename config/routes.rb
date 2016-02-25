@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     root "users#index"
     resources :users
     resources :subjects
-    resources :questions, only: [:index]
+    resources :questions
   end
   resources :users
 end
