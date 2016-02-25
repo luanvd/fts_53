@@ -6,6 +6,7 @@
     <th>#</th>
     <th><%= t "question.content" %></th>
     <th><%= t "question.status" %></th>
+    <th><%= t "question.approve" %></th>
     <th><%= t "question.created_at" %></th>
     <th><%= t "question.updated_at" %></th>
     <th><%= t "button.action" %></th>
@@ -17,6 +18,12 @@
         <td><%= link_to question.content, "#" %></td>
         <td>
           <%= status_of(question).html_safe %>
+        </td>
+        <td>
+          <%= form_for question, url: admin_question_path(question) do |q| %>
+            <%= q.hidden_field :status, value: :approved %>
+            <%= q.submit t("question.approve"), class: "btn btn-primary" %>
+          <% end %>
         </td>
         <td>
           <%= t "ago", time: time_ago_in_words(question.created_at) %>
