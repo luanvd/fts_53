@@ -71,7 +71,7 @@ en:
     create_failed: "Failed to create a Question!"
     update_success: "Updated a Question"
     update_failed: "Failed to update a Question!"
-    delete_success: "Deleted a Subject"
+    delete_success: "Deleted a Question"
     delete_failed: "Failed to delete a Question"
     answers: "Answers"
     approve: "Approve"

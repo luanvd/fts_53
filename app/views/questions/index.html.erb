@@ -19,9 +19,11 @@
           <%= status_of(question).html_safe %>
         </td>
         <td>
-          <%= link_to t("button.edit"), "#", class: "btn btn-primary" %>
-          <%= link_to t("button.delete"), "#", method: :delete, data:
-            {confirm: t("confirm")}, class: "btn btn-default btn-primary" %>
+          <%= link_to t("button.edit"), edit_question_path(question), class:
+            "btn btn-primary" %>
+          <%= link_to t("button.delete"), question_path(question),
+            method: :delete, data: {confirm: t("confirm")}, class:
+            "btn btn-default btn-primary" %>
         </td>
       </tr>
     <% end %>
