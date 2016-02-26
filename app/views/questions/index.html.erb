@@ -1,5 +1,6 @@
 <h1><%= t "question.suggest" %></h1>
-<%= link_to t("question.create"), "#", class: "btn btn-primary" %>
+<%= link_to t("question.create"), new_question_path, class:
+  "btn btn-primary" %>
 <table id="questions" class="table table-striped">
   <thead>
     <th>#</th>

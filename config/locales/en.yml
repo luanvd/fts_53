@@ -88,6 +88,8 @@ en:
   question_answer:
     correct: "Correct"
     incorrect: "Incorrect"
+    add: "Add more Answers"
+    remove: "Remove"
   button:
     edit: "Edit"
     delete: "Delete"

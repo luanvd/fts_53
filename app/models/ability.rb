@@ -13,6 +13,7 @@ class Ability
       can :show, Question do |question|
         question.user == user
       end
+      can :create, Question
     end
   end
 end
