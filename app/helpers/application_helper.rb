@@ -9,10 +9,18 @@ module ApplicationHelper
   end
 
   def status_of object
-    if object.waiting?
-      "<span class='label label-primary'>#{t("question.waiting")}</span>"
+    if object.class == Question
+      if object.waiting?
+        "<span class='label label-primary'>#{t("question.waiting")}</span>"
+      elsif object.approved?
+        "<span class='label label-success'>#{t("question.approved")}</span>"
+      end
     else
-      "<span class='label label-success'>#{t("question.approved")}</span>"
+      if object.correct?
+        "<span class='label label-success'>#{t("question.correct")}</span>"
+      else
+        "<span class='label label-danger'>#{t("question.incorrect")}</span>"
+      end
     end
   end
 end

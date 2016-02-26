@@ -10,6 +10,9 @@ class Ability
     else
       can :update, User, id: user.id
       can :index, Question
+      can :show, Question do |question|
+        question.user == user
+      end
     end
   end
 end
