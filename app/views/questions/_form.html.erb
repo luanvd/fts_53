@@ -1,0 +1,22 @@
+<%= nested_form_for @question, class: "form-group" do |f| %>
+  <%= f.label :subject_id %>
+  <%= f.collection_select :subject_id, @subjects, :id, :name,
+    {prompt: t("subject.select")}, {class: "form-control"} %>
+  <%= f.label :content %>
+  <%= f.text_field :content, class: "form-control" %>
+  <%= f.hidden_field :status, value: :waiting %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <b><%= t "question_answers" %></b>
+  <table>
+    <%= f.fields_for :question_answers do |builder| %>
+      <tr>
+        <td><%= builder.text_field :content%></td>
+        <td><%= builder.check_box :correct %></td>
+        <td><%= f.link_to_remove t "question_answer.remove" %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= f.link_to_add t("question_answer.add"), :question_answers %>
+  <%= f.submit t("button.submit"), class:
+    "btn btn-default btn-large btn-primary" %>
+<% end %>
