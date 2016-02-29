@@ -1,0 +1,42 @@
+<h1><%= t "lesson.list" %></h1>
+<div class="row">
+  <%= form_tag action: :create do %>
+    <div class="col-md-2">
+      <%= collection_select :lesson, :subject_id, @subjects, :id, :name,
+        {prompt: t("lesson.select_subject")}, {class: "form-control"} %>
+    </div>
+    <div class="col-md-2">
+      <%= submit_tag t("lesson.create"), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
+<hr />
+<%= paginate @lessons %>
+<table class="table table-striped">
+  <thead>
+    <th><%= t "lesson.created_at" %></th>
+    <th><%= t "lesson.subject" %></th>
+    <th><%= t "lesson.status" %></th>
+    <th><%= t "lesson.duration" %></th>
+    <th><%= t "lesson.question_number" %></th>
+    <th><%= t "lesson.spent_time" %></th>
+    <th><%= t "lesson.score" %></th>
+    <th><%= t "lesson.action" %></th>
+  </thead>
+  <tbody>
+    <% @lessons.each do |lesson| %>
+      <tr>
+        <td><%= lesson.created_at %></td>
+        <td><%= lesson.subject.name %></td>
+        <td><%= status_of(lesson).html_safe %></td>
+        <td><%= Settings.duration %></td>
+        <td><%= Settings.number_question_of_lesson %></td>
+        <td></td>
+        <td><%= lesson.score %></td>
+        <td>
+          <%= link_to t("button.start"), "#", class: "btn btn-primary" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

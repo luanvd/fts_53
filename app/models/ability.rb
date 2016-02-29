@@ -15,6 +15,7 @@ class Ability
       end
       can :create, Question
       can :destroy, Question
+      can :index, Lesson
     end
   end
 end
