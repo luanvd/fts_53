@@ -13,6 +13,10 @@ class Lesson < ActiveRecord::Base
 
   validate :questions_less_than_require, on: :create
 
+  def time_remaining
+    Settings.duration * Settings.lesson.second_per_minute - self.spent_time.to_i
+  end
+
   private
   def questions_less_than_require
     errors.add :create, I18n.t("lesson.create_failed") if self.subject.

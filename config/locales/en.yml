@@ -108,6 +108,13 @@ en:
     checked: "Checked"
     create_success: "Created a lesson for you"
     create_failed: "Failed to create new lesson"
+    start: "Start"
+    view: "View"
+    finish: "Finish"
+    save: "Save"
+    time_over: "Time Over"
+    default_spent_time: "00:00"
+    time_for_doing: "Time Remaining"
   button:
     edit: "Edit"
     delete: "Delete"
@@ -115,6 +122,7 @@ en:
     submit: "Submit"
     approve: "Approve"
     start: "Start"
+    view: "View"
   access_denied: "Access Denied!"
   admin:
     users: "Listing Users"

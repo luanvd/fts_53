@@ -17,6 +17,9 @@ class Ability
       can :destroy, Question
       can :index, Lesson
       can :create, Lesson
+      can :show, Lesson do |lesson|
+        lesson.user == user
+      end
     end
   end
 end

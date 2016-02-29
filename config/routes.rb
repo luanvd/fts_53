@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, only: [:session, :registration]
-  root "static_pages#home"
+  root "lessons#index"
   get "/about" => "static_pages#about"
   namespace :admin do
     root "users#index"
@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :update]
   resources :questions
   resources :subjects, only: [:index]
-  resources :lessons, only: [:index, :create]
+  resources :lessons, only: [:index, :create, :show]
 end
