@@ -1,0 +1,10 @@
+<%= form_for @lesson do |f| %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <div class="col-md-2">
+    <%= f.collection_select :subject_id, @subjects, :id, :name,
+      {prompt: t("lesson.select_subject")}, {class: "form-control"} %>
+  </div>
+  <div class="col-md-2">
+    <%= f.submit t("lesson.create"), class: "btn btn-primary" %>
+  </div>
+<% end %>

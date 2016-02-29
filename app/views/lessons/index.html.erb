@@ -1,14 +1,6 @@
 <h1><%= t "lesson.list" %></h1>
 <div class="row">
-  <%= form_tag action: :create do %>
-    <div class="col-md-2">
-      <%= collection_select :lesson, :subject_id, @subjects, :id, :name,
-        {prompt: t("lesson.select_subject")}, {class: "form-control"} %>
-    </div>
-    <div class="col-md-2">
-      <%= submit_tag t("lesson.create"), class: "btn btn-primary" %>
-    </div>
-  <% end %>
+  <%= render "form_lesson" %>
 </div>
 <hr />
 <%= paginate @lessons %>
