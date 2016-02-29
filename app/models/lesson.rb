@@ -1,4 +1,6 @@
 class Lesson < ActiveRecord::Base
+  enum status: [:start, :testing, :unchecked, :checked]
+
   belongs_to :user
   belongs_to :subject
 

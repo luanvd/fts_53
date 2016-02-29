@@ -15,6 +15,7 @@ gem "table_print"
 gem "cancancan"
 gem "config"
 gem "nested_form"
+gem "kaminari"
 
 group :development, :test do
   gem "byebug"
