@@ -106,6 +106,8 @@ en:
     testing: "Testing"
     unchecked: "Unchecked"
     checked: "Checked"
+    create_success: "Created a lesson for you"
+    create_failed: "Failed to create new lesson"
   button:
     edit: "Edit"
     delete: "Delete"
