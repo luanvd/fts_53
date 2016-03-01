@@ -17,6 +17,14 @@ class Lesson < ActiveRecord::Base
     Settings.duration * Settings.lesson.second_per_minute - self.spent_time.to_i
   end
 
+  def time_spent
+    self.spent_time.to_i + (Time.zone.now - self.updated_at).to_i
+  end
+
+  def score
+    self.results.where(correct: true).size
+  end
+
   private
   def questions_less_than_require
     errors.add :create, I18n.t("lesson.create_failed") if self.subject.

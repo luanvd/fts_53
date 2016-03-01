@@ -28,10 +28,10 @@
             <%= t "lesson.default_spent_time" %>
           <% else %>
             <%= "#{lesson.spent_time / Settings.lesson.second_per_minute} :
-              #{lesson.spent_time / Settings.lesson.second_per_minute}" %>
+              #{lesson.spent_time % Settings.lesson.second_per_minute}" %>
           <% end %>
         </td>
-        <td><%= lesson.score %></td>
+        <td></td>
         <td>
           <% if lesson.start? %>
             <%= link_to t("lesson.start"), lesson, class: "btn btn-primary" %>
