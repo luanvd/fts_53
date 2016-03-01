@@ -16,6 +16,10 @@ class LessonsController < ApplicationController
     redirect_to lessons_path
   end
 
+  def show
+    @time_remaining = @lesson.time_remaining
+  end
+
   private
   def lesson_params
     params.require(:lesson).permit :id, :user_id, :subject_id

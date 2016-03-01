@@ -2,3 +2,7 @@ number_question: 4
 number_questions_of_lesson: 5
 duration: 20
 per_page: 5
+lesson_start_index: 1
+lesson:
+  time_out: 0
+  second_per_minute: 60

@@ -22,11 +22,22 @@
         <td><%= lesson.subject.name %></td>
         <td><%= status_of(lesson).html_safe %></td>
         <td><%= Settings.duration %></td>
-        <td><%= Settings.number_question_of_lesson %></td>
-        <td></td>
+        <td><%= Settings.number_questions_of_lesson %></td>
+        <td>
+          <% if lesson.spent_time.nil? %>
+            <%= t "lesson.default_spent_time" %>
+          <% else %>
+            <%= "#{lesson.spent_time / Settings.lesson.second_per_minute} :
+              #{lesson.spent_time / Settings.lesson.second_per_minute}" %>
+          <% end %>
+        </td>
         <td><%= lesson.score %></td>
         <td>
-          <%= link_to t("button.start"), "#", class: "btn btn-primary" %>
+          <% if lesson.start? %>
+            <%= link_to t("lesson.start"), lesson, class: "btn btn-primary" %>
+          <% else %>
+            <%= link_to t("lesson.view"), lesson, class: "btn btn-success" %>
+          <% end %>
         </td>
       </tr>
     <% end %>

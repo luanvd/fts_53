@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="title">
+      <h1><center><b><%= @lesson.subject.name %></b></center></h1>
+    </div>
+    <% if @lesson.start? || @lesson.testing? %>
+      <div class="clock">
+        <% if @time_remaining > Settings.lesson.time_out %>
+          <h3 class="pull-right text-danger" id="clock">
+            <b><h3><%= t "lesson.time_for_doing" %></h3></b>
+            <span id="hidden-data" data-time-over-msg=
+              "<%= t "lesson.time_over" %>" data-time-remaining=
+              "<%= @time_remaining %>">
+            </span>
+            <span class="glyphicon glyphicon-time">&nbsp</span>
+            <b id="time-remaining"></b>
+          </h3>
+        <% end %>
+      </div>
+    <% end %>
+    <hr />
+    <div class="list-question">
+      <%= form_for @lesson do |f| %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.hidden_field :status, value: :unchecked %>
+        <%= f.fields_for :results do |builder| %>
+          <%= render "question", f: builder %>
+        <% end %>
+        <% if @lesson.start? || @lesson.testing? %>
+          <%= f.submit t("lesson.finish"), class: "btn btn-danger" %>
+          <%= f.submit t("lesson.save"), class: "btn btn-primary", id:
+            "save_lesson" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
