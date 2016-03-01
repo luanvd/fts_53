@@ -115,6 +115,8 @@ en:
     time_over: "Time Over"
     default_spent_time: "00:00"
     time_for_doing: "Time Remaining"
+    update_success: "Update success your lesson"
+    update_failed: "Failed update your lesson"
   button:
     edit: "Edit"
     delete: "Delete"

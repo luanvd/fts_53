@@ -22,7 +22,7 @@
     <div class="list-question">
       <%= form_for @lesson do |f| %>
         <%= f.hidden_field :user_id, value: current_user.id %>
-        <%= f.hidden_field :status, value: :unchecked %>
+        <%= f.hidden_field :status, value: :testing %>
         <%= f.fields_for :results do |builder| %>
           <%= render "question", f: builder %>
         <% end %>

@@ -16,12 +16,23 @@ class LessonsController < ApplicationController
     redirect_to lessons_path
   end
 
+  def update
+    @lesson.spent_time = @lesson.time_spent
+    if @lesson.update_attributes lesson_params
+      flash[:success] = t "lesson.update_success"
+    else
+      flash[:warning] = t "lesson.update_failed"
+    end
+    redirect_to lessons_path
+  end
+
   def show
     @time_remaining = @lesson.time_remaining
   end
 
   private
   def lesson_params
-    params.require(:lesson).permit :id, :user_id, :subject_id
+    params.require(:lesson).permit :id, :user_id, :subject_id, :status,
+      results_attributes: [:id, :question_id, :question_answer_id, :correct]
   end
 end
