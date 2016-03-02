@@ -16,6 +16,9 @@ gem "cancancan"
 gem "config"
 gem "nested_form"
 gem "kaminari"
+gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-google-oauth2"
 
 group :development, :test do
   gem "byebug"

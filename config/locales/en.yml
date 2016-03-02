@@ -44,6 +44,7 @@ en:
     update_failed: "Failed to update an User!"
     delete_success: "Deleted an User"
     delete_failed: "Failed to delete an User"
+    signin_with: "Sign in with"
   subject:
     list: "Listing Subject"
     create: "Create Subject"

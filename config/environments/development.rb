@@ -38,4 +38,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  ENV["facebook_app_id"] = "329162030468772";
+  ENV["facebook_app_secret"] = "8a7c271450818269f30bd33853e6919f";
+  ENV["google_app_id"] = "441651019074-6ce1b9k99jkmbc3uq7jfrbgho4qsveoi.apps.googleusercontent.com";
 end

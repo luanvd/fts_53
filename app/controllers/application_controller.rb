@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+  before_action :ensure_signup_complete
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -9,6 +10,13 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     flash[:warning] = exception.message
     redirect_to root_url
+  end
+
+  def ensure_signup_complete
+    return if action_name == "finish_signup"
+    if current_user && !current_user.email_verified?
+      redirect_to finish_signup_path(current_user)
+    end
   end
 
   private
