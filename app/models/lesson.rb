@@ -25,6 +25,18 @@ class Lesson < ActiveRecord::Base
     self.results.where(correct: true).size
   end
 
+  class << self
+    def send_statistic_when_end_of_month
+      Lesson.all.each do |lesson|
+        LessonMailer.send_statistic_when_end_of_month(lesson).deliver_now
+      end
+    end
+
+    def statistic_question_true
+      results.where(correct: true).size
+    end
+  end
+
   private
   def questions_less_than_require
     errors.add :create, I18n.t("lesson.create_failed") if self.subject.

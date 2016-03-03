@@ -17,6 +17,7 @@ gem "config"
 gem "nested_form"
 gem "kaminari"
 gem "delayed_job_active_record"
+gem "whenever", require: false
 
 group :development, :test do
   gem "byebug"
