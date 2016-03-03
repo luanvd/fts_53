@@ -58,6 +58,8 @@ en:
     delete_success: "Deleted an Subject"
     delete_failed: "Failed to delete a Subject"
     select: "Select a Subject"
+    new_subject: "We have new subject for you: "
+    title_mailer: "New subject notification"
   question:
     list: "Listing Question"
     create: "Create Question"
@@ -131,3 +133,5 @@ en:
     users: "Listing Users"
     subjects: "Listing Subjects"
     questions: "Listing Questions"
+  email:
+    hi: "Hello guy!"
