@@ -16,6 +16,7 @@ gem "cancancan"
 gem "config"
 gem "nested_form"
 gem "kaminari"
+gem "delayed_job_active_record"
 
 group :development, :test do
   gem "byebug"
