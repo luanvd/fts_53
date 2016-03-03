@@ -18,6 +18,8 @@ gem "nested_form"
 gem "kaminari"
 gem "factory_girl_rails"
 gem "faker"
+gem "omniauth"
+gem "omniauth-facebook"
 
 group :development, :test do
   gem "byebug"
