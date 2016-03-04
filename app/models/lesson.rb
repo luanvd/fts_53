@@ -8,6 +8,7 @@ class Lesson < ActiveRecord::Base
   has_many :questions, through: :results
 
   before_create :create_questions
+  after_update :send_result_lesson_email
 
   accepts_nested_attributes_for :results, allow_destroy: true
 
@@ -23,6 +24,10 @@ class Lesson < ActiveRecord::Base
 
   def score
     self.results.where(correct: true).size
+  end
+
+  def send_result_lesson_email
+    HardWorker.perform_async self.id
   end
 
   private
