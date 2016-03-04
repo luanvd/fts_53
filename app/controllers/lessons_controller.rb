@@ -33,6 +33,6 @@ class LessonsController < ApplicationController
   private
   def lesson_params
     params.require(:lesson).permit :id, :user_id, :subject_id, :status,
-      results_attributes: [:id, :question_id, :question_answer_id, :correct]
+      results_attributes: [:id, :question_id, content_answer: []]
   end
 end

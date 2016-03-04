@@ -27,7 +27,7 @@ class Lesson < ActiveRecord::Base
   end
 
   def send_result_lesson_email
-    HardWorker.perform_async self.id
+    HardWorker.perform_async self.id if self.checked?
   end
 
   private

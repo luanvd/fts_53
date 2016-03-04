@@ -3,8 +3,8 @@
     content}" %></p>
   <ul>
     <% f.object.question.question_answers.each do |question_answer| %>
-      <%= f.radio_button :question_answer_id, question_answer.id,
-        {checked: true} %>
+      <%= f.radio_button :content_answer, question_answer.id,
+        {checked: f.object.content_answer.include?(question_answer.id.to_s)} %>
       <%= question_answer.content %><br/>
     <% end %>
   </ul>

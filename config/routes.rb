@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
-  root "lessons#index"
   get "/about" => "static_pages#about"
   match "/users/:id/finish_signup", to: "users#finish_signup", via: [:get, :patch], as: :finish_signup
+  devise_scope :user do
+    authenticated :user do
+      root to: "lessons#index", as: "authenticated_root"
+    end
+
+    unauthenticated do
+      root to: "devise/sessions#new", as: "root"
+    end
+  end
   namespace :admin do
     root "users#index"
     resources :users

@@ -53,5 +53,4 @@ Rails.application.configure do
     password: ENV["GMAIL_PASSWORD"],
     domain: "localhost",
   }
->>>>>>> develop
 end

@@ -31,6 +31,7 @@ en:
   confirm: "Are you sure!"
   ago: "%{time} ago"
   user:
+    create: "Create User"
     update: "Update"
     list: "Listing User"
     name: "User Name"
