@@ -6,6 +6,7 @@ class Admin::SubjectsController < ApplicationController
 
   def create
     if @subject.save
+      SubjectNotificationService.new(@subject).mail_to_user_when_create
       flash[:success] = t "subject.create_success"
       redirect_to [:admin, @subject]
     else

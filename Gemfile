@@ -20,6 +20,8 @@ gem "factory_girl_rails"
 gem "faker"
 gem "omniauth"
 gem "omniauth-facebook"
+gem "delayed_job_active_record"
+gem "sidekiq"
 
 group :development, :test do
   gem "byebug"
