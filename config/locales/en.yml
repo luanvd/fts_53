@@ -120,6 +120,7 @@ en:
     update_success: "Update success your lesson"
     update_failed: "Failed update your lesson"
     lesson_delay: "Lesson must be start after 8 hour from created!"
+    lesson_result: "Result of lesson: "
   button:
     edit: "Edit"
     delete: "Delete"
