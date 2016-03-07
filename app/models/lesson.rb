@@ -23,11 +23,13 @@ class Lesson < ActiveRecord::Base
   end
 
   def score
-    self.results.where(correct: true).size
+    self.results.select do |result|
+      result.question_answer.correct? if result.question_answer
+    end.size
   end
 
   def send_result_lesson_email
-    HardWorker.perform_async self.id
+    HardWorker.perform_async self.id if self.checked?
   end
 
   private

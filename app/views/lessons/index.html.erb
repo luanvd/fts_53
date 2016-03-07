@@ -31,7 +31,7 @@
               #{lesson.spent_time % Settings.lesson.second_per_minute}" %>
           <% end %>
         </td>
-        <td></td>
+        <td><%= lesson.score %></td>
         <td>
           <% if lesson.start? %>
             <%= link_to t("lesson.start"), lesson, class: "btn btn-primary" %>

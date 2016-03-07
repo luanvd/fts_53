@@ -3,9 +3,11 @@
     content}" %></p>
   <ul>
     <% f.object.question.question_answers.each do |question_answer| %>
-      <%= f.radio_button :question_answer_id, question_answer.id,
-        {checked: true} %>
-      <%= question_answer.content %><br/>
+      <li>
+        <%= f.radio_button :question_answer_id, question_answer.id,
+          {checked: f.object.question_answer_id == question_answer.id} %>
+        <%= question_answer.content %><br/>
+      </li>
     <% end %>
   </ul>
 </div>
