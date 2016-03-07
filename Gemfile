@@ -24,6 +24,7 @@ gem "omniauth-facebook"
 gem "delayed_job_active_record"
 gem "sidekiq"
 gem "jquery-datatables-rails"
+gem "rspec"
 
 group :development, :test do
   gem "byebug"
