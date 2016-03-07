@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
 gem "rails", "4.2.5"
-gem "sqlite3"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
 gem "coffee-rails", "~> 4.1.0"
@@ -18,9 +17,11 @@ gem "nested_form"
 gem "kaminari"
 gem "delayed_job_active_record"
 gem "sidekiq"
+gem "whenever", require: false
 
 group :development, :test do
   gem "byebug"
+  gem "sqlite3"
 end
 
 group :development do
@@ -29,3 +30,8 @@ group :development do
   gem "factory_girl_rails"
   gem "faker"
 end
+
+group :production do
+  gem "pg"
+end
+
