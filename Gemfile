@@ -18,6 +18,7 @@ gem "nested_form"
 gem "kaminari"
 gem "delayed_job_active_record"
 gem "sidekiq"
+gem "whenever", require: false
 
 group :development, :test do
   gem "byebug"
