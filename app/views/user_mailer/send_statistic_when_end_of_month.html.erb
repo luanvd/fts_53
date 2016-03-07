@@ -1,0 +1,20 @@
+<h1><%= @user.name %></h1>
+<p>
+  <b><%= t "user.lesson_statistic" %></b>
+</p>
+<table>
+  <thead>
+    <tr>
+      <th><%= t "user.lesson_subject" %></th>
+      <th><%= t "user.lesson_score" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lessons.each do |lesson| %>
+      <tr>
+        <td><%= lesson.subject.name %></td>
+        <td><%= lesson.score %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

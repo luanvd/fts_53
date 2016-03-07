@@ -44,6 +44,9 @@ en:
     update_failed: "Failed to update an User!"
     delete_success: "Deleted an User"
     delete_failed: "Failed to delete an User"
+    lesson_statistic: "Lesson Statistic"
+    lesson_score: "Lesson Score"
+    lesson_subject: "Subject"
   subject:
     list: "Listing Subject"
     create: "Create Subject"
