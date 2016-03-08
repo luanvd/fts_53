@@ -19,6 +19,12 @@ gem "kaminari"
 gem "delayed_job_active_record"
 gem "sidekiq"
 gem "whenever", require: false
+gem "rspec-rails"
+gem "simplecov", require: false
+gem "rspec-collection_matchers"
+gem "rspec-activemodel-mocks"
+gem "shoulda-matchers", require: false
+gem "capybara"
 
 group :development, :test do
   gem "byebug"
