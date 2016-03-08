@@ -23,16 +23,16 @@ gem "rspec-rails"
 gem "simplecov", require: false
 gem "rspec-collection_matchers"
 gem "rspec-activemodel-mocks"
-gem "shoulda-matchers", require: false
+gem "shoulda-matchers"
 gem "capybara"
 
 group :development, :test do
   gem "byebug"
+  gem "factory_girl_rails"
 end
 
 group :development do
   gem "web-console", "~> 2.0"
   gem "spring"
-  gem "factory_girl_rails"
   gem "faker"
 end

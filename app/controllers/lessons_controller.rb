@@ -1,5 +1,6 @@
 class LessonsController < ApplicationController
   load_and_authorize_resource
+  before_action :authenticate_user!
 
   def index
     @lessons = @lessons.page(params[:page]).per Settings.per_page
