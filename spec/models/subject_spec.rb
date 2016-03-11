@@ -1,7 +1,6 @@
 require "rails_helper"
-require "factory_girl_rails"
-RSpec.describe Subject, type: :model do
 
+RSpec.describe Subject, type: :model do
   let!(:subject) {FactoryGirl.create :subject}
 
   it {is_expected.to respond_to :name}

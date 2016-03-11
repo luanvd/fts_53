@@ -1,7 +1,8 @@
-require 'simplecov'
-
+require "simplecov"
+require "factory_girl_rails"
 SimpleCov.start do
   add_group "Models", "app/models"
+  add_group "Controllers", "app/controllers"
 end
 SimpleCov.coverage_dir "public/coverage"
 
