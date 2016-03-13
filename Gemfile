@@ -18,16 +18,22 @@ gem "kaminari"
 gem "delayed_job_active_record"
 gem "sidekiq"
 gem "whenever", require: false
+gem "rspec-rails"
+gem "simplecov", require: false
+gem "rspec-collection_matchers"
+gem "rspec-activemodel-mocks"
+gem "shoulda-matchers"
+gem "capybara"
 
 group :development, :test do
   gem "byebug"
   gem "sqlite3"
+  gem "factory_girl_rails"
 end
 
 group :development do
   gem "web-console", "~> 2.0"
   gem "spring"
-  gem "factory_girl_rails"
   gem "faker"
 end
 
